@@ -1,0 +1,131 @@
+.services {
+	overflow: hidden;
+}
+
+.services__container {
+	display: flex;
+	align-items: center;
+}
+
+.services__body {
+	flex: 0 0 54.8%;
+	padding: 30px 40px 30px 0px;
+}
+
+.services__header:not(:last-child) {
+	margin: 0px 0px 85px 0px;
+}
+
+.services__items {
+	flex: 1 1 auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 65px;
+}
+
+.services__media {
+	position: relative;
+	padding: 165px 0;
+}
+
+.services__media::before {
+	content: "";
+	position: absolute;
+	width: 100vw;
+	left: 64px;
+	top: 50%;
+	transform: translate(0px, -50%);
+	height: 200vh;
+	background-color: #6257fe;
+}
+
+.services__image {
+	max-width: 427px;
+	position: relative;
+	z-index: 2;
+}
+
+.services__image img {
+	width: 100%;
+}
+
+.services__phone {
+	width: 342px;
+	z-index: 2;
+	position: absolute;
+	left: 290px;
+	bottom: -20px;
+	display: inline-block;
+}
+
+.services__phone img {
+	width: 100%;
+}
+
+.item-services__icon {
+	margin: 0px 0px 14px 0px;
+}
+
+.item-services__title {
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 1.45;
+	display: flex;
+	align-items: center;
+	margin: 0px 0px 22px 0px;
+}
+
+.item-services__title::before {
+	content: "";
+	height: 1px;
+	flex: 1 1 auto;
+	background-color: #100c46;
+	margin: 0px 10px 0px 0px;
+}
+
+.item-services__text {
+}
+
+@media (max-width: 1520px) {
+	.services__media {
+		position: relative;
+		padding: 100px 0;
+	}
+	.services__phone {
+		left: 0px;
+		width: 60%;
+		bottom: 0px;
+	}
+}
+@media (max-width: 1200px) {
+	.services__header:not(:last-child) {
+		margin: 0px 0px 40px 0px;
+	}
+}
+@media (max-width: 991.98px) {
+	.services {
+		background-color: #6257fe;
+	}
+	.services__body {
+		flex: 1 1 auto;
+		background-color: #fff;
+		margin: 0px -15px;
+		padding: 40px 15px;
+	}
+	.services__container {
+		flex-direction: column;
+	}
+	.services__media {
+		padding: 40px 0 100px 0;
+	}
+	.services__media::before {
+		display: none;
+	}
+}
+@media (max-width: 650px) {
+	.services__items {
+		display: grid;
+		grid-template-columns: auto;
+		gap: 30px;
+	}
+}

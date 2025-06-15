@@ -1,0 +1,68 @@
+.footer {
+  padding: 110px 0px 80px 0px;
+}
+
+.footer__body {
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__copy {
+  text-align: center;
+}
+
+.footer__up {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  flex: 0 0 70px;
+  z-index: 2;
+  background: #6257fe url("/img/icons/chevron-up.svg") center no-repeat;
+  background-size: 30px 30px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.footer__up:hover {
+  background-color: #100c46;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+.footer__up::after {
+  content: "Go to top";
+  position: absolute;
+  top: -35px;
+  right: 0;
+  background-color: #100c46;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.footer__up:hover::after {
+  opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+  .footer {
+    padding: 40px 0px 40px 0px;
+  }
+  .footer__body {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+  .footer__up {
+    position: static;
+  }
+}

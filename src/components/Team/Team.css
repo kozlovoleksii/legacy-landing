@@ -1,0 +1,133 @@
+.team {
+  padding: 30px 0px 150px 0px;
+}
+
+.team__header {
+  margin: 0px 0px 60px 0px;
+}
+
+.team__items {
+  display: grid;
+  gap: 23px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.team__item {
+	transition: all 0.3s ease;
+}
+
+.team__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.item-team {
+  position: relative;
+}
+
+.item-team__image {
+  position: relative;
+  padding: 0px 0px 135% 0px;
+}
+
+.item-team__image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.item-team__info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  gap: 10px;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: rgba(98, 87, 254, 0.8);
+  transition: background-color 0.3s ease;
+}
+
+.team__item:hover .item-team__info {
+  background-color: rgba(98, 87, 254, 0.95);
+}
+
+.item-team__body {
+  flex: 1 0 auto;
+  color: #fff;
+}
+
+.item-team__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0px 0px 5px 0px;
+}
+
+.item-team__position {
+  font-size: 14px;
+  line-height: 2.28;
+}
+
+.social-team {
+  display: flex;
+  gap: 13px;
+}
+.social-team__item {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.social-team__item img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.social-team__item:hover {
+  background-color: #100c46;
+}
+
+.team .social-team__item:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.team__item,
+.item-team {
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .team {
+    padding: 0px 0 50px 0;
+  }
+  .team__header {
+    margin: 0px 0px 20px 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  .team__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767.98px) {
+  .team__items {
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .team__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
